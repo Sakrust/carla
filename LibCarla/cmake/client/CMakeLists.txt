@@ -13,6 +13,8 @@ file(GLOB libcarla_sources
 file(GLOB_RECURSE libcarla_client_sources
     "${libcarla_source_path}/carla/client/*.h"
     "${libcarla_source_path}/carla/client/*.cpp"
+    "${libcarla_source_path}/carla/pointcloud/*.h"
+    "${libcarla_source_path}/carla/pointcloud/*.cpp"
     "${libcarla_source_path}/carla/rpc/*.h"
     "${libcarla_source_path}/carla/rpc/*.cpp"
     "${libcarla_source_path}/carla/streaming/*.h"
@@ -57,6 +59,11 @@ file(GLOB libcarla_carla_client_headers
     "${libcarla_source_path}/carla/client/*.cpp"
     "${libcarla_source_path}/carla/client/*.h")
 install(FILES ${libcarla_carla_client_headers} DESTINATION include/carla/client)
+
+file(GLOB libcarla_carla_pointcloud_headers
+    "${libcarla_source_path}/carla/pointcloud/*.cpp"
+    "${libcarla_source_path}/carla/pointcloud/*.h")
+install(FILES ${libcarla_carla_pointcloud_headers} DESTINATION include/carla/pointcloud)
 
 file(GLOB libcarla_carla_rpc_headers
     "${libcarla_source_path}/carla/rpc/*.cpp"
